@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             builder: (BuildContext context,
                 AsyncSnapshot<List<TodoModel>> snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                return HomePage();
+                return const HomePage();
               } else {
                 return const CircularProgressIndicator();
               }
