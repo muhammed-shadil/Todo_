@@ -8,6 +8,8 @@ class TodoModel {
 
   @HiveField(1)
   bool isComplete;
+  @HiveField(2)
+  final String age;
 
-  TodoModel(this.title, {this.isComplete = false});
+  TodoModel(this.title, this.age, {this.isComplete = false});
 }

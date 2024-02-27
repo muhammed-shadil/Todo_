@@ -23,6 +23,7 @@ class delete extends StatelessWidget {
             var todo = box.getAt(index);
             return ListTile(
               title: Text(todo!.title),
+                subtitle: Text(todo.age),
               leading: IconButton(
                 icon: const Icon(Icons.restore),
                 onPressed: () {
