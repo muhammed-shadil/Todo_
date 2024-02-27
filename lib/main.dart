@@ -27,7 +27,9 @@ class MyApp extends StatelessWidget {
         final isDark = box.get('isDark', defaultValue: false);
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: isDark ? AppThemes.appThemeData[AppTheme.darkTheme] : AppThemes.appThemeData[AppTheme.lightTheme],
+          theme: isDark
+              ? AppThemes.appThemeData[AppTheme.darkTheme]
+              : AppThemes.appThemeData[AppTheme.lightTheme],
           home: FutureBuilder(
               future: _todoService.getAllTodo(),
               builder: (BuildContext context,

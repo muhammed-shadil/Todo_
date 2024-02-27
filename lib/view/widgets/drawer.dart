@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 import 'package:todo_final/controller/services.dart';
 import 'package:todo_final/view/homepage.dart';
@@ -43,7 +42,7 @@ class DrawerPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(() => settingSpage(),transition: Transition.fadeIn);
+                Get.to(() =>const settingSpage(),transition: Transition.fadeIn);
               },
               child:const ListTile(
                 title: Text("Settings"),
