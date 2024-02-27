@@ -40,7 +40,7 @@ class taskpage extends StatelessWidget {
                         children: [
                           Text(
                             todo!.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                           Text(todo.age),
@@ -58,8 +58,17 @@ class taskpage extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (builder)=>edit(task: todo.title, desc: todo.age, index: index,)));
-                           },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (builder) => edit(
+                                task: todo.title,
+                                desc: todo.age,
+                                index: index,
+                              ),
+                            ),
+                          );
+                        },
                         icon: const Icon(Icons.edit),
                       ),
                     ],
