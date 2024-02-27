@@ -43,12 +43,12 @@ class _editState extends State<edit> {
             TextFormField(
               controller: _controller,
               autofocus: true,
-              decoration: InputDecoration( 
+              decoration:const InputDecoration( 
               ),
             ),
             TextFormField(
               controller: _controller2,
-              decoration: InputDecoration(
+              decoration:const InputDecoration(
               ),
             ),
             CustomButton(
