@@ -4,7 +4,8 @@ import 'package:todo_final/model/todomodel.dart';
 import 'package:todo_final/view/widgets/custom_button.dart';
 
 class edit extends StatefulWidget {
-  const edit({super.key, required this.task, required this.desc, required this.index});
+  const edit(
+      {super.key, required this.task, required this.desc, required this.index});
 
   final String task;
   final String desc;
@@ -35,7 +36,7 @@ class _editState extends State<edit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("edit")),
+      appBar: AppBar(title: const Text("edit")),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -43,19 +44,17 @@ class _editState extends State<edit> {
             TextFormField(
               controller: _controller,
               autofocus: true,
-              decoration:const InputDecoration( 
-              ),
+              decoration: const InputDecoration(),
             ),
             TextFormField(
               controller: _controller2,
-              decoration:const InputDecoration(
-              ),
+              decoration: const InputDecoration(),
             ),
             CustomButton(
               onpressed: () {
-                final value=TodoModel(_controller.text, _controller2.text);
+                final value = TodoModel(_controller.text, _controller2.text);
                 Hive.box<TodoModel>("todoBox").putAt(widget.index, value);
-                print("value updated");
+
                 Navigator.pop(context);
               },
               text: "Update",
