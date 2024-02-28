@@ -70,9 +70,9 @@ class AppThemes {
         bodyLarge: TextStyle(color: Colors.black),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        backgroundColor: Color.fromARGB(255, 116, 171, 99),
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Color.fromARGB(255, 194, 8, 8),
+        backgroundColor: Colors.transparent,
+        unselectedItemColor:Colors.black ,
+        selectedItemColor: Colors.white,
       ),
       appBarTheme: const AppBarTheme(
         iconTheme: IconThemeData(color: Colors.white, size: 30),
