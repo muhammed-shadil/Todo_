@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/adapters.dart';
 import 'package:todo_final/controller/services.dart';
 import 'package:todo_final/view/widgets/delete.dart';
 import 'package:todo_final/view/widgets/drawer.dart';
