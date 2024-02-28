@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-class settingSpage extends StatefulWidget {
-  const settingSpage({super.key});
+class settingsPage extends StatefulWidget {
+  const settingsPage({super.key});
 
   @override
-  State<settingSpage> createState() => _settingSpageState();
+  State<settingsPage> createState() => _settingsPageState();
 }
 
-class _settingSpageState extends State<settingSpage> {
+class _settingsPageState extends State<settingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

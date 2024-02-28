@@ -5,7 +5,6 @@ import 'package:todo_final/view/homepage.dart';
 import 'package:todo_final/view/widgets/delete.dart';
 import 'package:todo_final/view/widgets/profile.dart';
 import 'package:todo_final/view/widgets/settings.dart';
-import 'package:todo_final/view/widgets/taskpage.dart';
 
 class DrawerPage extends StatelessWidget {
   DrawerPage({super.key});
@@ -42,7 +41,7 @@ class DrawerPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(() =>const settingSpage(),transition: Transition.fadeIn);
+                Get.to(() =>const settingsPage(),transition: Transition.fadeIn);
               },
               child:const ListTile(
                 title: Text("Settings"),
