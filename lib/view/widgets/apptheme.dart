@@ -18,8 +18,8 @@ class AppThemes {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          minimumSize: MaterialStateProperty.all(Size(100, 35)),
-          backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 56, 56, 56)),
+          minimumSize: MaterialStateProperty.all(const Size(100, 35)),
+          backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 56, 56, 56)),
           foregroundColor: MaterialStateProperty.all(Colors.white),
         ),
       ),
@@ -60,8 +60,8 @@ class AppThemes {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          minimumSize: MaterialStateProperty.all(Size(100, 35)),
-          backgroundColor: MaterialStateProperty.all(Color(0xFF9395D3)),
+          minimumSize: MaterialStateProperty.all(const Size(100, 35)),
+          backgroundColor: MaterialStateProperty.all(const Color(0xFF9395D3)),
           foregroundColor: MaterialStateProperty.all(Colors.white),
         ),
       ),
