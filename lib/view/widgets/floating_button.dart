@@ -27,14 +27,27 @@ class FloatingButton extends StatelessWidget {
           builder: (context) {
             return AlertDialog(
               contentPadding: const EdgeInsets.all(20),
-              title: const Text("add todo"),
+              title: const Text("Add To do"),
               content: Column(
                 children: [
                   TextFormField(
                     autofocus: true,
+                    decoration: const InputDecoration(
+                        hintText: "Task",
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(13)))),
                     controller: _controller,
                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: "description",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(13))),
+                    ),
                     controller: _controller2,
                   ),
                 ],
