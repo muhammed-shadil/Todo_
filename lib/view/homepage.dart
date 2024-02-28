@@ -31,14 +31,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("TO DO"),
-       
       ),
       drawer: DrawerPage(),
-      floatingActionButton:
-          FloatingButton(controller: _controller, todoService: _todoService,controller2:_controller2 ,),
+      floatingActionButton: FloatingButton(
+        controller: _controller,
+        todoService: _todoService,
+        controller2: _controller2,
+      ),
       body: pages[_currentindex],
       bottomNavigationBar: BottomNavigationBar(
-         currentIndex: _currentindex,
+        currentIndex: _currentindex,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined), label: "home"),

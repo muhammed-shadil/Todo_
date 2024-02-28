@@ -16,11 +16,13 @@ class _settingsPageState extends State<settingsPage> {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(children: [
-          
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Theme",style: TextStyle(fontSize: 25),),
+              const Text(
+                "Theme",
+                style: TextStyle(fontSize: 25),
+              ),
               ValueListenableBuilder(
                 valueListenable: Hive.box('settings').listenable(),
                 builder: (context, box, child) {

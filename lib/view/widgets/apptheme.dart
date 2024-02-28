@@ -19,7 +19,8 @@ class AppThemes {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           minimumSize: MaterialStateProperty.all(const Size(100, 35)),
-          backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 56, 56, 56)),
+          backgroundColor:
+              MaterialStateProperty.all(const Color.fromARGB(255, 56, 56, 56)),
           foregroundColor: MaterialStateProperty.all(Colors.white),
         ),
       ),
@@ -42,8 +43,6 @@ class AppThemes {
         shadowColor: Color.fromARGB(255, 88, 88, 88),
       ),
     ),
-
-
     AppTheme.lightTheme: ThemeData(
       primarySwatch: Colors.green,
       primaryColor: Colors.green,
@@ -71,9 +70,10 @@ class AppThemes {
         bodyLarge: TextStyle(color: Colors.black),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Color.fromARGB(255, 116, 171, 99),
+        backgroundColor: Color.fromARGB(255, 116, 171, 99),
         unselectedItemColor: Colors.white,
-        selectedItemColor: Color.fromARGB(255, 194, 8, 8),),
+        selectedItemColor: Color.fromARGB(255, 194, 8, 8),
+      ),
       appBarTheme: const AppBarTheme(
         iconTheme: IconThemeData(color: Colors.white, size: 30),
         titleTextStyle: TextStyle(

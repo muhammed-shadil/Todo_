@@ -26,7 +26,7 @@ class FloatingButton extends StatelessWidget {
           context: context,
           builder: (context) {
             return AlertDialog(
-              contentPadding: EdgeInsets.all(20),
+              contentPadding: const EdgeInsets.all(20),
               title: const Text("add todo"),
               content: Column(
                 children: [
@@ -40,19 +40,24 @@ class FloatingButton extends StatelessWidget {
                 ],
               ),
               actions: [
-                CustomButton(onpressed: () { Navigator.pop(context);  }, text: 'cancel',),
-                CustomButton(onpressed: (){ if (_controller.text.isNotEmpty&&_controller2.text.isNotEmpty) {
-                      var todo = TodoModel(_controller.text, _controller2.text);
-                      _todoService.addTodo(todo);
-                      _controller.clear();
-                      Navigator.pop(context);
-                    }}, text: 'Add')
-
-
-
-
-
-               
+                CustomButton(
+                  onpressed: () {
+                    Navigator.pop(context);
+                  },
+                  text: 'cancel',
+                ),
+                CustomButton(
+                    onpressed: () {
+                      if (_controller.text.isNotEmpty &&
+                          _controller2.text.isNotEmpty) {
+                        var todo =
+                            TodoModel(_controller.text, _controller2.text);
+                        _todoService.addTodo(todo);
+                        _controller.clear();
+                        Navigator.pop(context);
+                      }
+                    },
+                    text: 'Add')
               ],
             );
           },
@@ -61,4 +66,3 @@ class FloatingButton extends StatelessWidget {
     );
   }
 }
-

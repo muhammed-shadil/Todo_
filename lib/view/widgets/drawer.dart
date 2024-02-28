@@ -25,7 +25,7 @@ class DrawerPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Get.offAll(() =>const HomePage());
+                Get.offAll(() => const HomePage());
               },
               child: const ListTile(
                 title: Text("My Tasks"),
@@ -33,7 +33,7 @@ class DrawerPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(()=>delete(todoService: _todoService));
+                Get.to(() => delete(todoService: _todoService));
               },
               child: const ListTile(
                 title: Text("Deleted tasks"),
@@ -41,17 +41,18 @@ class DrawerPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(() =>const settingsPage(),transition: Transition.fadeIn);
+                Get.to(() => const settingsPage(),
+                    transition: Transition.fadeIn);
               },
-              child:const ListTile(
+              child: const ListTile(
                 title: Text("Settings"),
               ),
             ),
-            GestureDetector(onTap: () {
-                Get.to(() =>const profile(),transition: Transition.zoom);
-         
-            },
-              child:const ListTile(
+            GestureDetector(
+              onTap: () {
+                Get.to(() => const profile(), transition: Transition.zoom);
+              },
+              child: const ListTile(
                 title: Text("profile"),
               ),
             ),

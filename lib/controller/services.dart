@@ -4,7 +4,7 @@ import 'package:todo_final/model/todomodel.dart';
 class Services {
   final String _boxName = "todoBox";
 
-   Future<Box<TodoModel>> get _box async =>
+  Future<Box<TodoModel>> get _box async =>
       await Hive.openBox<TodoModel>(_boxName);
 
   Future<void> addTodo(TodoModel item) async {
@@ -39,5 +39,4 @@ class Services {
     var deletedBox = await Hive.openBox<TodoModel>('deletedTodoBox');
     await deletedBox.deleteAt(index);
   }
-  
 }
