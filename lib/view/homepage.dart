@@ -48,36 +48,40 @@ class _HomePageState extends State<HomePage> {
         controller2: _controller2,
       ),
       body: pages[_currentindex],
-      bottomNavigationBar: Stack(children: [
-        Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.red,
-                Colors.blue,
-              ],
+      bottomNavigationBar: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Colors.red,
+                  Colors.blue,
+                ],
+              ),
             ),
+            height: 60,
           ),
-          height: 60,
-        ),
-        BottomNavigationBar(
-          currentIndex: _currentindex,
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined), label: "home"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.delete_outline), label: "delete")
-          ],
-          onTap: (value) {
-            setState(() {
-              _currentindex = value;
-            });
-          },
-          type: BottomNavigationBarType.fixed,
-        ),
-      ]),
+          BottomNavigationBar(
+            currentIndex: _currentindex,
+            items: const [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home_outlined), label: "home"),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.delete_outline), label: "delete")
+            ],
+            onTap: (value) {
+              setState(
+                () {
+                  _currentindex = value;
+                },
+              );
+            },
+            type: BottomNavigationBarType.fixed,
+          ),
+        ],
+      ),
     );
   }
 }

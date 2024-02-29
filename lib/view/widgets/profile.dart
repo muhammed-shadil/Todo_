@@ -7,9 +7,22 @@ class profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.purple, Colors.blue],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+            ),
+          ),
+        ),
         title: const Text("profile"),
       ),
-      body: const SizedBox(child: Center(child: Text("this the profile page"))),
+      body: const SizedBox(
+        child: Center(
+          child: Text("this the profile page"),
+        ),
+      ),
     );
   }
 }

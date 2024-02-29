@@ -36,7 +36,18 @@ class _editState extends State<edit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("edit")),
+      appBar: AppBar(
+        title: const Text("Edit"),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.purple, Colors.blue],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+            ),
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -44,11 +55,16 @@ class _editState extends State<edit> {
             TextFormField(
               controller: _controller,
               autofocus: true,
-              decoration: const InputDecoration(),
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(13)))),
             ),
+            const SizedBox(height: 15,),
             TextFormField(
               controller: _controller2,
-              decoration: const InputDecoration(),
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(13)))),
             ),
             CustomButton(
               onpressed: () {
