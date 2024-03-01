@@ -40,10 +40,18 @@ class taskpage extends StatelessWidget {
                         children: [
                           Text(
                             todo.title,
+                            overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
+                            maxLines: 1,
+                            softWrap: true,
                           ),
-                          Text(todo.age),
+                          Text(
+                            todo.age,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            softWrap: true,
+                          ),
                         ],
                       ),
                     ],
