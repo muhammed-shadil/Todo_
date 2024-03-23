@@ -34,10 +34,13 @@ class FloatingButton extends StatelessWidget {
                     TextFormField(
                       autofocus: true,
                       decoration: const InputDecoration(
-                          hintText: "Task",
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(13)))),
+                        hintText: "Task",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(13),
+                          ),
+                        ),
+                      ),
                       controller: _controller,
                     ),
                     const SizedBox(
@@ -47,7 +50,10 @@ class FloatingButton extends StatelessWidget {
                       decoration: const InputDecoration(
                         hintText: "description",
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(13))),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(13),
+                          ),
+                        ),
                       ),
                       controller: _controller2,
                     ),
@@ -69,6 +75,7 @@ class FloatingButton extends StatelessWidget {
                             TodoModel(_controller.text, _controller2.text);
                         _todoService.addTodo(todo);
                         _controller.clear();
+                        _controller2.clear();
                         Navigator.pop(context);
                       }
                     },

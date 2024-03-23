@@ -59,7 +59,9 @@ class _editState extends State<edit> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(13)))),
             ),
-            const SizedBox(height: 15,),
+            const SizedBox(
+              height: 15,
+            ),
             TextFormField(
               controller: _controller2,
               decoration: const InputDecoration(
